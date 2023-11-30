@@ -2,10 +2,12 @@
 
 ## New Flavors
 
-- [ ] blackberry
-- [ ] caramelized-vanilla
+The following flavors have appropriate images:
+
+- [x] blackberry
+- [x] caramelized-vanilla
 - [ ] chocolate-cream-pie
 - [ ] madagascar-vanilla
-- [ ] rosemary-pear-caramel
+- [x] rosemary-pear-caramel
 - [ ] speculoos
-- [ ] super-citrus-caramel
+- [x] super-citrus-caramel
