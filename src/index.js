@@ -1,7 +1,8 @@
 const app = document.querySelector("#app");
-const currentDate = 25; // new Date().getDate(); // Or a specific date e.g. 25
-
 const now = new Date();
+
+// Only allow the date for the month of December
+const currentDate = now.getMonth() === 11 ? now.getDate() : 0;
 
 /**
  * @typedef {import('https://unpkg.com/magic-snowflakes@6.2.0/dist/index.d.ts')} Snowflakes
