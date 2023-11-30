@@ -1,0 +1,102 @@
+[
+  {
+    "flavor": "Cardamom Caramel",
+    "details": []
+  },
+  {
+    "flavor": "Black Currant",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  {
+    "flavor": "Blackberry Mint",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  {
+    "flavor": "Cranberry & Kaffir Lime Leaf",
+    "details": []
+  },
+  {
+    "flavor": "Orange Blossom",
+    "details": []
+  },
+  {
+    "flavor": "Milk Chocolate Cinnamon",
+    "details": []
+  },
+  {
+    "flavor": "Passion Fruit",
+    "details": []
+  },
+  {
+    "flavor": "60% Dark Chocolate",
+    "details": []
+  },
+  {
+    "flavor": "Milk Chocolate",
+    "details": []
+  },
+  {
+    "flavor": "Strawberry",
+    "details": ["Non-Dairy", "Contains Coconut and Honey"]
+  },
+  {
+    "flavor": "Maple",
+    "details": []
+  },
+  {
+    "flavor": "Mixed Berry",
+    "details": []
+  },
+  {
+    "flavor": "Vanilla",
+    "details": []
+  },
+  {
+    "flavor": "Spiced Honey",
+    "details": []
+  },
+  {
+    "flavor": "Dark Chocolate Mint",
+    "details": []
+  },
+  {
+    "flavor": "Milk Chocolate Cinnamon",
+    "details": []
+  },
+  {
+    "flavor": "Salted Dark Caramel",
+    "details": []
+  },
+  {
+    "flavor": "Raspberry",
+    "details": []
+  },
+  {
+    "flavor": "Peppermint",
+    "details": ["Non-Dairy"]
+  },
+  {
+    "flavor": "Gingerbread",
+    "details": []
+  },
+  {
+    "flavor": "Coconut",
+    "details": []
+  },
+  {
+    "flavor": "Earl Grey",
+    "details": []
+  },
+  {
+    "flavor": "Apricot Sichuan",
+    "details": []
+  },
+  {
+    "flavor": "72% Dark Chocolate",
+    "details": []
+  },
+  {
+    "flavor": "Sudachi Yuzu",
+    "details": []
+  }
+]

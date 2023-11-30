@@ -1,0 +1,245 @@
+:root {
+  --background-color: hsl(207, 100%, 10%);
+  --modal-primary-background: #eee;
+  --modal-secondary-background: hsl(207, 100%, 34%);
+  --modal-primary-color: hsl(207, 100%, 10%);
+  --modal-secondary-color: #eee;
+  --box-shadow: 0px 0px 2rem 0.667rem rgba(0, 0, 0, 0.33);
+  --cell-border: 0.1rem solid hsla(0, 0, 0, 0.25);
+  --object-ginger-color-light: hsl(30, 80%, 50%);
+  --object-ginger-color-dark: hsl(30, 80%, 40%);
+  --object-roof-color: hsl(30, 90%, 25%);
+  --object-door-color: #f00;
+  --object-snow-color: #fff;
+  --cell-size: min(14vw, 12vh);
+  --header-size: calc(var(--cell-size) * 0.5);
+  --star-size: calc(var(--cell-size) * 0.667);
+  --number-size: calc(var(--cell-size) * 0.25);
+  --font-size: calc(var(--cell-size) * 0.4);
+  --line-height: calc(var(--cell-size) * 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  gap: 1rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    var(--object-snow-color) 0%,
+    var(--object-snow-color) 12%,
+    var(--modal-secondary-background) 50%,
+    var(--background-color) 100%
+  );
+}
+
+.header {
+  font-weight: bold;
+  font-size: var(--header-size);
+  color: #eee;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  border: 0.5rem solid #fff;
+  padding: 0.5rem;
+  background: var(--object-ginger-color-dark);
+  box-shadow: var(--box-shadow);
+}
+
+.cell {
+  position: relative;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: var(--modal-secondary-background);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+  background: var(--object-ginger-color-light);
+  font-weight: bold;
+  font-size: var(--number-size);
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.cell[data-active]::before,
+.cell[data-past]::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: 50% 50%;
+  text-shadow: none;
+  font-weight: normal;
+}
+
+.cell[data-active]::before {
+  content: "\2605";
+  color: rgba(255, 255, 64, 0.8);
+  font-size: var(--star-size);
+  line-height: var(--star-size);
+  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.75);
+}
+
+.cell[data-past]::before {
+  content: "\2739";
+  color: rgba(0, 0, 0, 0.333);
+  font-size: var(--cell-size);
+  line-height: var(--cell-size);
+}
+
+.cell[data-align="top"] {
+  justify-content: start;
+}
+.cell[data-align="middle"] {
+  justify-content: center;
+}
+.cell[data-align="bottom"] {
+  justify-content: end;
+}
+
+.cell[data-justify="left"] {
+  align-items: start;
+}
+.cell[data-justify="center"] {
+  align-items: center;
+}
+.cell[data-justify="right"] {
+  align-items: end;
+}
+
+.cell[data-type="roof"] {
+  background: var(--object-roof-color);
+}
+.cell[data-type="roof-left"] {
+  background: var(--object-roof-color);
+  background: linear-gradient(
+    315deg,
+    var(--object-ginger-color-light) 0%,
+    var(--object-ginger-color-light) 50%,
+    var(--object-roof-color) 50%,
+    var(--object-roof-color) 100%
+  );
+}
+.cell[data-type="roof-right"] {
+  background: var(--object-roof-color);
+  background: linear-gradient(
+    45deg,
+    var(--object-ginger-color-light) 0%,
+    var(--object-ginger-color-light) 50%,
+    var(--object-roof-color) 50%,
+    var(--object-roof-color) 100%
+  );
+}
+.cell[data-type="window"] {
+  border: 0.1rem solid var(--object-snow-color);
+  border-bottom: 0.5rem solid var(--object-snow-color);
+}
+.cell[data-type="door"] {
+  background: var(--object-door-color);
+}
+.cell[data-type="peppermint"] {
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--object-door-color) 0%,
+    var(--object-snow-color) 33%,
+    var(--object-door-color) 66%,
+    var(--object-snow-color) 100%
+  );
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.667);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.modal.modal-active {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: var(--modal-primary-background);
+  color: var(--modal-primary-color);
+  border: thin solid var(--modal-secondary-background);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+}
+
+.modal-header {
+  display: flex;
+  background: var(--modal-secondary-background);
+  color: var(--modal-secondary-color);
+  align-items: center;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+
+.modal-title {
+  flex: 1;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+  width: var(--font-size);
+  height: var(--font-size);
+}
+
+.modal-close:before {
+  content: "\00D7";
+}
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0.5em;
+  text-align: center;
+}

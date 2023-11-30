@@ -1,0 +1,152 @@
+[
+  {
+    "value": 10,
+    "align": "bottom",
+    "justify": "right",
+    "type": "roof-left"
+  },
+  {
+    "value": 7,
+    "align": "top",
+    "justify": "right",
+    "type": "roof-right"
+  },
+  {
+    "value": 15,
+    "align": "middle",
+    "justify": "right",
+    "type": "roof"
+  },
+  {
+    "value": 20,
+    "align": "middle",
+    "justify": "left",
+    "type": "roof-left"
+  },
+  {
+    "value": 17,
+    "align": "top",
+    "justify": "right",
+    "type": "roof-right"
+  },
+  {
+    "value": 12,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 14,
+    "align": "top",
+    "justify": "right",
+    "type": "window"
+  },
+  {
+    "value": 22,
+    "align": "middle",
+    "justify": "right",
+    "type": "peppermint"
+  },
+  {
+    "value": 18,
+    "align": "bottom",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 11,
+    "align": "bottom",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 1,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 5,
+    "align": "bottom",
+    "justify": "right",
+    "type": "window"
+  },
+  {
+    "value": 25,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 9,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 4,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 16,
+    "align": "top",
+    "justify": "right",
+    "type": "window"
+  },
+  {
+    "value": 13,
+    "align": "top",
+    "justify": "right",
+    "type": "window"
+  },
+  {
+    "value": 23,
+    "align": "top",
+    "justify": "left",
+    "type": "door"
+  },
+  {
+    "value": 2,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 8,
+    "align": "top",
+    "justify": "right",
+    "type": "window"
+  },
+  {
+    "value": 19,
+    "align": "top",
+    "justify": "center",
+    "type": "window"
+  },
+  {
+    "value": 3,
+    "align": "middle",
+    "justify": "center",
+    "type": "window"
+  },
+  {
+    "value": 21,
+    "align": "top",
+    "justify": "right",
+    "type": "door"
+  },
+  {
+    "value": 24,
+    "align": "top",
+    "justify": "left",
+    "type": "window"
+  },
+  {
+    "value": 6,
+    "align": "bottom",
+    "justify": "right",
+    "type": "window"
+  }
+]
