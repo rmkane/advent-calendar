@@ -3,6 +3,9 @@ const currentDate = 25; // new Date().getDate(); // Or a specific date e.g. 25
 
 const now = new Date();
 
+/**
+ * @typedef {import('https://unpkg.com/magic-snowflakes@6.2.0/dist/index.d.ts')} Snowflakes
+ */
 const snowflakes = new Snowflakes({
   count: 100, // Default: 50
   minSize: 20, // Default: 10
@@ -84,6 +87,15 @@ const onClick = (event) => {
   showModal(modal, true);
 };
 
+const handleKeyDown = (event) => {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    onHideModal({
+      currentTarget: document.querySelector(".modal-close"),
+    });
+  }
+};
+
 const nth = (n) =>
   ["st", "nd", "rd"][((((n + 90) % 100) - 10) % 10) - 1] || "th";
 
@@ -109,16 +121,24 @@ const formatFlavor = (flavor, details) =>
 
 const formatMessage = (date, flavor, details) => {
   const nthDate = `${date}${nth(date)}`;
+
   if (date > currentDate) {
     return `<div>No peeking until the ${nthDate}!</div>`;
-  } else {
-    const formattedFlavor = formatFlavor(flavor, details);
-    if (date === currentDate) {
-      return `<div>Today's flavor is:</div><div>${formattedFlavor}</div>`;
-    } else {
-      return `<div>The flavor for the ${nthDate} was:</div><div>${formattedFlavor}</div>`;
-    }
   }
+
+  const formattedFlavor = formatFlavor(flavor, details);
+
+  if (date === currentDate) {
+    return `
+      <div>Today's flavor is:</div>
+      <div>${formattedFlavor}</div>
+    `;
+  }
+
+  return `
+    <div>The flavor for the ${nthDate} was:</div>
+    <div>${formattedFlavor}</div>
+  `;
 };
 
 const fetchFlavors = async () =>
@@ -149,3 +169,4 @@ const fetchJson = async (url, defaultValue = []) => {
 };
 
 document.addEventListener("DOMContentLoaded", main);
+document.addEventListener("keydown", handleKeyDown);
