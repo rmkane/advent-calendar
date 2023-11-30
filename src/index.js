@@ -19,6 +19,7 @@ const createElement = (tagName, options) =>
 const main = async () => {
   const layouts = await fetchLayouts();
   const flavors = await fetchFlavors();
+  const flavorDetails = await fetchFlavorDetails();
 
   const title = `${now.getFullYear()} Advent Calendar`;
 
@@ -34,7 +35,9 @@ const main = async () => {
   Object.assign(document, { title });
 
   app.append(header);
-  container.append(...layouts.map((layout) => createCell(layout, flavors)));
+  container.append(
+    ...layouts.map((layout) => createCell(layout, flavors, flavorDetails))
+  );
   app.append(container);
 
   document.querySelector(".container").addEventListener("click", onClick);
@@ -43,9 +46,10 @@ const main = async () => {
   snowflakes.start();
 };
 
-const createCell = (layout, flavors) => {
+const createCell = (layout, flavors, flavorDetails) => {
   const { align, justify, type, value } = layout;
-  const { flavor, details } = flavors[value - 1];
+  const slug = flavors[value - 1];
+  const { name: flavor, details } = flavorDetails[slug];
   const cell = createElement("div", {
     className: "cell",
     textContent: value,
@@ -55,6 +59,7 @@ const createCell = (layout, flavors) => {
   cell.setAttribute("data-flavor", flavor);
   cell.setAttribute("data-details", JSON.stringify(details));
   cell.setAttribute("data-date", value);
+  cell.setAttribute("data-slug", slug);
   cell.setAttribute("data-type", type);
   if (value === currentDate) {
     cell.setAttribute("data-active", true);
@@ -74,11 +79,12 @@ const onClick = (event) => {
 
   const modal = document.querySelector(".modal");
   const date = +target.getAttribute("data-date");
+  const slug = target.getAttribute("data-slug");
   const flavor = target.getAttribute("data-flavor");
   const details = JSON.parse(target.getAttribute("data-details"));
   const title = formatTitle(date);
   const message = formatMessage(date, flavor, details);
-  const image = `<img src="./src/resources/images/${date}.jpg" alt="${flavor}" width="300rem" />`;
+  const image = `<img src="./src/resources/images/${slug}.jpg" alt="${flavor}" width="300rem" />`;
   const content = date <= currentDate ? `${message}<br />${image}` : message;
 
   modal.querySelector(".modal-title").textContent = title;
@@ -141,13 +147,18 @@ const formatMessage = (date, flavor, details) => {
   `;
 };
 
-const fetchFlavors = async () =>
-  fetchJson("./src/data/flavors.json", [
+const fetchFlavorDetails = async () =>
+  fetchJson("./src/data/flavor-details.json", [
     {
-      flavor: "Mystery",
-      details: [],
+      "milk-chocolate": {
+        name: "Milk Chocolate",
+        details: [],
+      },
     },
   ]);
+
+const fetchFlavors = async () =>
+  fetchJson("./src/data/flavors.json", ["milk-chocolate"]);
 
 const fetchLayouts = async () =>
   fetchJson("./src/data/layout.json", [

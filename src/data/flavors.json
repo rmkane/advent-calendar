@@ -1,102 +1,27 @@
 [
-  {
-    "flavor": "Cardamom Caramel",
-    "details": []
-  },
-  {
-    "flavor": "Black Currant",
-    "details": ["Non-Dairy", "Contains Coconut"]
-  },
-  {
-    "flavor": "Blackberry Mint",
-    "details": ["Non-Dairy", "Contains Coconut"]
-  },
-  {
-    "flavor": "Cranberry & Kaffir Lime Leaf",
-    "details": []
-  },
-  {
-    "flavor": "Orange Blossom",
-    "details": []
-  },
-  {
-    "flavor": "Milk Chocolate Cinnamon",
-    "details": []
-  },
-  {
-    "flavor": "Passion Fruit",
-    "details": []
-  },
-  {
-    "flavor": "60% Dark Chocolate",
-    "details": []
-  },
-  {
-    "flavor": "Milk Chocolate",
-    "details": []
-  },
-  {
-    "flavor": "Strawberry",
-    "details": ["Non-Dairy", "Contains Coconut and Honey"]
-  },
-  {
-    "flavor": "Maple",
-    "details": []
-  },
-  {
-    "flavor": "Mixed Berry",
-    "details": []
-  },
-  {
-    "flavor": "Vanilla",
-    "details": []
-  },
-  {
-    "flavor": "Spiced Honey",
-    "details": []
-  },
-  {
-    "flavor": "Dark Chocolate Mint",
-    "details": []
-  },
-  {
-    "flavor": "Milk Chocolate Cinnamon",
-    "details": []
-  },
-  {
-    "flavor": "Salted Dark Caramel",
-    "details": []
-  },
-  {
-    "flavor": "Raspberry",
-    "details": []
-  },
-  {
-    "flavor": "Peppermint",
-    "details": ["Non-Dairy"]
-  },
-  {
-    "flavor": "Gingerbread",
-    "details": []
-  },
-  {
-    "flavor": "Coconut",
-    "details": []
-  },
-  {
-    "flavor": "Earl Grey",
-    "details": []
-  },
-  {
-    "flavor": "Apricot Sichuan",
-    "details": []
-  },
-  {
-    "flavor": "72% Dark Chocolate",
-    "details": []
-  },
-  {
-    "flavor": "Sudachi Yuzu",
-    "details": []
-  }
+  "dark-chocolate-mint",
+  "orange-blossom",
+  "passion-fruit",
+  "earl-grey",
+  "mixed-berry",
+  "gingerbread",
+  "caramelized-vanilla",
+  "madagascar-vanilla",
+  "super-citrus-caramel",
+  "maple",
+  "rosemary-pear-caramel",
+  "spiced-honey",
+  "speculoos",
+  "black-currant",
+  "salted-dark-caramel",
+  "cardamom-caramel",
+  "60-dark-chocolate",
+  "peppermint",
+  "blackberry",
+  "chocolate-cream-pie",
+  "strawberry",
+  "milk-chocolate-cinnamon",
+  "72-dark-chocolate",
+  "apricot-sichuan",
+  "raspberry"
 ]

@@ -1,0 +1,126 @@
+{
+  "60-dark-chocolate": {
+    "name": "60% Dark Chocolate",
+    "details": []
+  },
+  "72-dark-chocolate": {
+    "name": "72% Dark Chocolate",
+    "details": []
+  },
+  "apricot-sichuan": {
+    "name": "Apricot Sichuan",
+    "details": []
+  },
+  "black-currant": {
+    "name": "Black Currant",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  "blackberry": {
+    "name": "Blackberry",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  "blackberry-mint": {
+    "name": "Blackberry Mint",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  "cardamom-caramel": {
+    "name": "Cardamom Caramel",
+    "details": []
+  },
+  "caramelized-vanilla": {
+    "name": "Caramelized Vanilla",
+    "details": []
+  },
+  "chocolate-cream-pie": {
+    "name": "Chocolate Cream Pie",
+    "details": ["Contains Gluten & Gelatin"]
+  },
+  "coconut": {
+    "name": "Coconut",
+    "details": []
+  },
+  "cranberry-kaffir-lime-leaf": {
+    "name": "Cranberry & Kaffir Lime Leaf",
+    "details": []
+  },
+  "dark-chocolate-mint": {
+    "name": "Dark Chocolate Mint",
+    "details": []
+  },
+  "earl-grey": {
+    "name": "Earl Grey",
+    "details": []
+  },
+  "gingerbread": {
+    "name": "Gingerbread",
+    "details": ["No Gluten"]
+  },
+  "madagascar-vanilla": {
+    "name": "Madagascar Vanilla",
+    "details": []
+  },
+  "maple": {
+    "name": "Maple",
+    "details": []
+  },
+  "milk-chocolate": {
+    "name": "Milk Chocolate",
+    "details": []
+  },
+  "milk-chocolate-cinnamon": {
+    "name": "Milk Chocolate Cinnamon",
+    "details": []
+  },
+  "mixed-berry": {
+    "name": "Mixed Berry",
+    "details": []
+  },
+  "orange-blossom": {
+    "name": "Orange Blossom",
+    "details": []
+  },
+  "passion-fruit": {
+    "name": "Passion Fruit",
+    "details": []
+  },
+  "peppermint": {
+    "name": "Peppermint",
+    "details": ["Non-Dairy", "Fondant"]
+  },
+  "raspberry": {
+    "name": "Raspberry",
+    "details": []
+  },
+  "rosemary-pear-caramel": {
+    "name": "Rosemary Pear Caramel",
+    "details": []
+  },
+  "salted-dark-caramel": {
+    "name": "Salted Dark Caramel",
+    "details": []
+  },
+  "speculoos": {
+    "name": "Speculoos",
+    "details": ["Contains Gluten"]
+  },
+  "spiced-honey": {
+    "name": "Spiced Honey",
+    "details": []
+  },
+  "strawberry": {
+    "name": "Strawberry",
+    "details": ["Non-Dairy", "Contains Coconut"]
+  },
+  "sudachi-yuzu": {
+    "name": "Sudachi Yuzu",
+    "details": []
+  },
+  "super-citrus-caramel": {
+    "name": "Super Citrus Caramel",
+    "details": []
+  },
+  "vanilla": {
+    "name": "Vanilla",
+    "details": []
+  }
+}
