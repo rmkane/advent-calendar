@@ -28,7 +28,7 @@ const main = async () => {
     textContent: title,
   });
 
-  document.title = title;
+  Object.assign(document, { title });
 
   app.append(header);
   container.append(...layouts.map((layout) => createCell(layout, flavors)));
@@ -93,17 +93,13 @@ const onHideModal = (e) => {
   showModal(e.currentTarget.closest(".modal"), false);
 };
 
-const formatTitle = (date) => {
-  const d = new Date(now.getTime());
-  d.setMonth(11);
-  d.setDate(date);
-  return d.toLocaleDateString("en-US", {
+const formatTitle = (date) =>
+  new Date(now.getFullYear(), 11, date).toLocaleString("en-US", {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-};
 
 const formatFlavor = (flavor, details) =>
   ((flavorHTML) =>
@@ -125,35 +121,30 @@ const formatMessage = (date, flavor, details) => {
   }
 };
 
-const fetchFlavors = async () => {
-  try {
-    const response = await fetch("./src/data/flavors.json");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    return [
-      {
-        flavor: "Mystery",
-        details: [],
-      },
-    ];
-  }
-};
+const fetchFlavors = async () =>
+  fetchJson("./src/data/flavors.json", [
+    {
+      flavor: "Mystery",
+      details: [],
+    },
+  ]);
 
-const fetchLayouts = async () => {
+const fetchLayouts = async () =>
+  fetchJson("./src/data/layout.json", [
+    {
+      value: 1,
+      align: "center",
+      justify: "center",
+      type: "window",
+    },
+  ]);
+
+const fetchJson = async (url, defaultValue = []) => {
   try {
-    const response = await fetch("./src/data/layout.json");
-    const data = await response.json();
-    return data;
+    const response = await fetch(url);
+    return response.json();
   } catch (error) {
-    return [
-      {
-        value: 1,
-        align: "center",
-        justify: "center",
-        type: "window",
-      },
-    ];
+    return defaultValue;
   }
 };
 
